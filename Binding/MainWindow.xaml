@@ -1,0 +1,27 @@
+﻿<Window x:Class="Binding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Binding"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="WindowLoaded">
+    <Grid>
+        <DataGrid Name="itemsDataGrid"  Height="250" VerticalAlignment="Top"/>
+        <Separator HorizontalAlignment="Left" Height="11" Margin="0,267,0,0" VerticalAlignment="Top" Width="792"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,288,0,0" TextWrapping="Wrap" Text="Название" VerticalAlignment="Top"/>
+        <TextBox Name="nameTextBox" HorizontalAlignment="Left" Height="23" Margin="83,287,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,316,0,0" TextWrapping="Wrap" Text="Цена" VerticalAlignment="Top"/>
+        <TextBox Name="priceTextBox" HorizontalAlignment="Left" Height="23" Margin="83,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBlock HorizontalAlignment="Left" Margin="243,288,0,0" TextWrapping="Wrap" Text="Описание" VerticalAlignment="Top"/>
+        <RichTextBox Name="descriptionRichTextBox" HorizontalAlignment="Left" Height="73" Margin="322,290,0,0" VerticalAlignment="Top" Width="184">
+
+        </RichTextBox>
+        <Button Name="createButton" Click="CreateButtonClick" Content="Создать" HorizontalAlignment="Left" Margin="10,344,0,0" VerticalAlignment="Top" Width="92" Height="27"/>
+        <StatusBar Height="22" VerticalAlignment="Bottom">
+            <ProgressBar Name="progressBar" Visibility="Collapsed" Width="120" Height="18" IsIndeterminate="True"/>
+            <TextBlock Name="statusTextBlock" Text="Готово"/>
+        </StatusBar>
+        <Button Name="changeFirstRowButton" Click="ChangeFirstRowButtonClick" Content="Изменить первую запись" HorizontalAlignment="Left" Margin="128,344,0,0" VerticalAlignment="Top" Width="146" Height="27"/>
+    </Grid>
+</Window>
